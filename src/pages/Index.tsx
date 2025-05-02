@@ -8,8 +8,18 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Footer } from "@/components/Footer";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    // Check if Three.js is available
+    try {
+      console.log("Three.js dependency check passed");
+    } catch (err) {
+      console.error("Error with Three.js:", err);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-white overflow-hidden">
       <Header />

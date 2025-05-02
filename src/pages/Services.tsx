@@ -2,7 +2,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Code, Smartphone, Cloud, BarChart4, Globe, Database } from "lucide-react";
+import { 
+  Check, ArrowRight, Code, Smartphone, Cloud, BarChart4, Globe, Database,
+  Users, Building, MapPin, FileCheck, BriefcaseBusiness, BuildingOffice2 
+} from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
 
 const Services = () => {
   const containerVariants = {
@@ -24,7 +29,7 @@ const Services = () => {
     }
   };
 
-  const services = [
+  const softwareServices = [
     {
       id: "web-development",
       icon: Code,
@@ -129,6 +134,111 @@ const Services = () => {
     }
   ];
 
+  const recruitmentServices = [
+    {
+      id: "tech-talent",
+      icon: Users,
+      title: "Tech Talent Sourcing",
+      description: "We help companies find and recruit top-tier technology professionals across all specializations, from junior developers to senior architects and executives.",
+      features: [
+        "Software developers and engineers",
+        "DevOps and SRE professionals",
+        "Data scientists and analysts",
+        "Product managers and designers",
+        "Technical leads and architects",
+        "CTO and IT executive search"
+      ],
+      technologies: ["Technical assessment", "Cultural fit evaluation", "Market mapping", "Talent pool building"],
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      color: "from-devcode-purple to-devcode-blue"
+    },
+    {
+      id: "remote-staffing",
+      icon: Building,
+      title: "Remote & Onsite Staffing",
+      description: "We provide flexible staffing solutions for both remote teams and onsite positions, helping companies scale their workforce according to project needs.",
+      features: [
+        "Remote team building",
+        "Contract and full-time placements",
+        "Team augmentation",
+        "Project-based staffing",
+        "Dedicated development teams",
+        "Nearshore and offshore options"
+      ],
+      technologies: ["Remote work platforms", "Team collaboration tools", "Performance tracking", "Resource management"],
+      image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      color: "from-devcode-blue to-devcode-pink"
+    },
+    {
+      id: "relocation",
+      icon: MapPin,
+      title: "Relocation Support",
+      description: "We offer comprehensive immigration and relocation assistance for professionals moving to the UK, USA, and Canada, making international hiring seamless.",
+      features: [
+        "Visa sponsorship guidance",
+        "Work permit applications",
+        "Housing assistance",
+        "Family relocation support",
+        "Cultural integration programs",
+        "Legal compliance advisory"
+      ],
+      technologies: ["Immigration systems", "Relocation management", "Cross-border compliance", "International payroll"],
+      image: "https://images.unsplash.com/photo-1544967082-d9d25d867d66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      color: "from-devcode-pink to-devcode-purple"
+    },
+    {
+      id: "cv-interview",
+      icon: FileCheck,
+      title: "CV & Interview Preparation",
+      description: "We provide professional guidance to job seekers to optimize their CVs and prepare for technical interviews, increasing their chances of landing their dream jobs.",
+      features: [
+        "Resume optimization and tailoring",
+        "LinkedIn profile enhancement",
+        "Mock technical interviews",
+        "Behavioral interview coaching",
+        "Portfolio review and improvement",
+        "Salary negotiation guidance"
+      ],
+      technologies: ["ATS optimization", "Technical assessment preparation", "Presentation skills", "Negotiation techniques"],
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      color: "from-devcode-purple to-devcode-orange"
+    },
+    {
+      id: "industry-hiring",
+      icon: BriefcaseBusiness,
+      title: "Industry-Specific Hiring",
+      description: "We offer specialized recruitment services for various industries including IT, Finance, Healthcare, and other sectors, with deep understanding of each field's requirements.",
+      features: [
+        "Industry-specific talent pools",
+        "Specialized skill assessment",
+        "Compliance and regulatory expertise",
+        "Industry trend insights",
+        "Competitive analysis",
+        "Market rate benchmarking"
+      ],
+      technologies: ["Healthcare IT", "FinTech", "EdTech", "E-commerce", "Manufacturing", "Energy"],
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      color: "from-devcode-orange to-devcode-blue"
+    },
+    {
+      id: "employer-branding",
+      icon: BuildingOffice2,
+      title: "Employer Branding",
+      description: "We help companies develop and promote their employer brand to attract and retain top talent in competitive markets.",
+      features: [
+        "Employer value proposition development",
+        "Recruitment marketing strategies",
+        "Candidate experience optimization",
+        "Employee testimonial campaigns",
+        "Social media presence enhancement",
+        "Recruitment event planning"
+      ],
+      technologies: ["Brand analytics", "Content marketing", "Social media strategies", "Candidate journey mapping"],
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      color: "from-devcode-blue to-devcode-purple"
+    }
+  ];
+
   const process = [
     {
       number: "01",
@@ -191,89 +301,189 @@ const Services = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Comprehensive technology solutions tailored to your business needs
+                Comprehensive technology solutions and recruitment services tailored to your business needs
               </motion.p>
+              
+              <Tabs defaultValue="software" className="w-full">
+                <div className="flex justify-center mb-8">
+                  <TabsList className="bg-black/20 backdrop-blur-sm border border-white/10">
+                    <TabsTrigger 
+                      value="software"
+                      className={cn("data-[state=active]:bg-gradient-to-r data-[state=active]:from-devcode-purple/20 data-[state=active]:to-devcode-blue/20 data-[state=active]:text-white")}
+                    >
+                      Software Development
+                    </TabsTrigger>
+                    <TabsTrigger 
+                      value="recruitment"
+                      className={cn("data-[state=active]:bg-gradient-to-r data-[state=active]:from-devcode-blue/20 data-[state=active]:to-devcode-purple/20 data-[state=active]:text-white")}
+                    >
+                      Recruitment Agency
+                    </TabsTrigger>
+                  </TabsList>
+                </div>
+              </Tabs>
             </div>
           </div>
         </section>
 
-        {/* Services List */}
+        {/* Services Tabs Content */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            {services.map((service, index) => (
-              <div 
-                key={service.id}
-                className={`mb-24 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'} lg:items-center`}
-                id={service.id}
-              >
-                <motion.div
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
-                >
-                  <div>
-                    <div className={`h-16 w-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6`}>
-                      <service.icon className="h-8 w-8 text-white" />
-                    </div>
-                    
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">{service.title}</h2>
-                    
-                    <p className="text-gray-300 mb-8">
-                      {service.description}
-                    </p>
-                    
-                    <div className="mb-8">
-                      <h3 className="text-xl font-semibold mb-4">Key Features</h3>
-                      <ul className="space-y-3">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start">
-                            <Check className="h-5 w-5 text-devcode-blue mr-2 mt-0.5" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">Technologies We Use</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {service.technologies.map((tech, techIndex) => (
-                          <span 
-                            key={techIndex} 
-                            className="px-3 py-1 rounded-full text-sm bg-white/10 text-white"
+            <Tabs defaultValue="software" className="w-full">
+              <TabsContent value="software" className="mt-0 focus-visible:outline-none focus-visible:ring-0">
+                {softwareServices.map((service, index) => (
+                  <div 
+                    key={service.id}
+                    className={`mb-24 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'} lg:items-center`}
+                    id={service.id}
+                  >
+                    <motion.div
+                      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.7 }}
+                    >
+                      <div>
+                        <div className={`h-16 w-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6`}>
+                          <service.icon className="h-8 w-8 text-white" />
+                        </div>
+                        
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{service.title}</h2>
+                        
+                        <p className="text-gray-300 mb-8">
+                          {service.description}
+                        </p>
+                        
+                        <div className="mb-8">
+                          <h3 className="text-xl font-semibold mb-4">Key Features</h3>
+                          <ul className="space-y-3">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-start">
+                                <Check className="h-5 w-5 text-devcode-blue mr-2 mt-0.5" />
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h3 className="text-xl font-semibold mb-4">Technologies We Use</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {service.technologies.map((tech, techIndex) => (
+                              <span 
+                                key={techIndex} 
+                                className="px-3 py-1 rounded-full text-sm bg-white/10 text-white"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="mt-8">
+                          <a 
+                            href={`/contact?service=${service.id}`} 
+                            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-devcode-purple to-devcode-blue hover:opacity-90 transition-opacity"
                           >
-                            {tech}
-                          </span>
-                        ))}
+                            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="mt-8">
-                      <a 
-                        href={`/contact?service=${service.id}`} 
-                        className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-devcode-purple to-devcode-blue hover:opacity-90 transition-opacity"
-                      >
-                        Get Started <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
-                    </div>
+                      
+                      <div className="relative perspective">
+                        <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-xl opacity-20 blur-xl`}></div>
+                        
+                        <div className="glass-morphism rounded-xl overflow-hidden">
+                          <img 
+                            src={service.image} 
+                            alt={service.title} 
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
-                  
-                  <div className="relative perspective">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-xl opacity-20 blur-xl`}></div>
-                    
-                    <div className="glass-morphism rounded-xl overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="w-full h-auto"
-                      />
-                    </div>
+                ))}
+              </TabsContent>
+              
+              <TabsContent value="recruitment" className="mt-0 focus-visible:outline-none focus-visible:ring-0">
+                {recruitmentServices.map((service, index) => (
+                  <div 
+                    key={service.id}
+                    className={`mb-24 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'} lg:items-center`}
+                    id={service.id}
+                  >
+                    <motion.div
+                      className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.7 }}
+                    >
+                      <div>
+                        <div className={`h-16 w-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6`}>
+                          <service.icon className="h-8 w-8 text-white" />
+                        </div>
+                        
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">{service.title}</h2>
+                        
+                        <p className="text-gray-300 mb-8">
+                          {service.description}
+                        </p>
+                        
+                        <div className="mb-8">
+                          <h3 className="text-xl font-semibold mb-4">What We Offer</h3>
+                          <ul className="space-y-3">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-start">
+                                <Check className="h-5 w-5 text-devcode-blue mr-2 mt-0.5" />
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h3 className="text-xl font-semibold mb-4">Expertise Areas</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {service.technologies.map((tech, techIndex) => (
+                              <span 
+                                key={techIndex} 
+                                className="px-3 py-1 rounded-full text-sm bg-white/10 text-white"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="mt-8">
+                          <a 
+                            href={`/contact?service=${service.id}`} 
+                            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-devcode-purple to-devcode-blue hover:opacity-90 transition-opacity"
+                          >
+                            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div className="relative perspective">
+                        <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-xl opacity-20 blur-xl`}></div>
+                        
+                        <div className="glass-morphism rounded-xl overflow-hidden">
+                          <img 
+                            src={service.image} 
+                            alt={service.title} 
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
-                </motion.div>
-              </div>
-            ))}
+                ))}
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
 
