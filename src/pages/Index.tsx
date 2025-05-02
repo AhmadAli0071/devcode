@@ -8,25 +8,8 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Footer } from "@/components/Footer";
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const Index = () => {
-  useEffect(() => {
-    // Load Three.js dynamically to avoid SSR issues
-    const loadScript = async () => {
-      try {
-        await import('three');
-        console.log("Three.js loaded successfully");
-      } catch (err) {
-        console.error("Error loading Three.js:", err);
-      }
-    };
-
-    loadScript();
-  }, []);
-
   return (
     <div className="min-h-screen bg-background text-white overflow-hidden">
       <Header />
