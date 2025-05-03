@@ -1,10 +1,9 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { 
   Check, ArrowRight, Code, Smartphone, Cloud, BarChart4, Globe, Database,
-  Users, Building, MapPin, FileCheck, BriefcaseBusiness, BuildingOffice2 
+  Users, Building, MapPin, FileCheck, BriefcaseBusiness, Building2 
 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
@@ -222,7 +221,7 @@ const Services = () => {
     },
     {
       id: "employer-branding",
-      icon: BuildingOffice2,
+      icon: Building2,
       title: "Employer Branding",
       description: "We help companies develop and promote their employer brand to attract and retain top talent in competitive markets.",
       features: [

@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Code, Smartphone, Cloud, BarChart4, Globe, Database, Users, Building, MapPin, FileCheck, BriefcaseBusiness, BuildingOffice2 } from "lucide-react";
+import { Code, Smartphone, Cloud, BarChart4, Globe, Database, Users, Building, MapPin, FileCheck, BriefcaseBusiness, Building2 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
@@ -75,7 +75,7 @@ const recruitmentServices = [
     color: "from-devcode-orange to-devcode-blue"
   },
   {
-    icon: BuildingOffice2,
+    icon: Building2,
     title: "Employer Branding",
     description: "Consulting services to help companies attract and retain top talent.",
     color: "from-devcode-blue to-devcode-purple"
