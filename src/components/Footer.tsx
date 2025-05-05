@@ -55,11 +55,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-devcode-blue" />
-                <span className="text-gray-400">+1 (123) 456-7890</span>
+                <span className="text-gray-400">+44 7716 413210</span>
               </li>
               <li className="text-gray-400 mt-2">
-                123 Tech Plaza, <br />
-                Silicon Valley, CA 94043
+              123 High Street London, Greater London <br />
+                W1A 1AA United Kingdom 
               </li>
             </ul>
           </div>

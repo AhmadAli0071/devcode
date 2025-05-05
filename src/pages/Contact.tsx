@@ -172,7 +172,7 @@ const Contact = () => {
                     </div>
                   </div>
                   
-                  <div className="pt-4">
+                  {/* <div className="pt-4">
                     <h3 className="text-lg font-semibold text-white mb-3">Follow Us</h3>
                     <div className="flex space-x-4">
                       <a href="#" className="bg-white/10 hover:bg-white/20 transition-colors p-2.5 rounded-full">
@@ -196,7 +196,7 @@ const Contact = () => {
                         </svg>
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
