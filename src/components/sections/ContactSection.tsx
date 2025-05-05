@@ -100,7 +100,6 @@ export const ContactSection = () => {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Email Us</h4>
                     <p className="text-gray-400">contact@devcode.com</p>
-                    <p className="text-gray-400">support@devcode.com</p>
                   </div>
                 </div>
                 
@@ -110,8 +109,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">Call Us</h4>
-                    <p className="text-gray-400">+1 (123) 456-7890</p>
-                    <p className="text-gray-400">+1 (123) 456-7891</p>
+                    <p className="text-gray-400">+44 7716 413210</p>
                   </div>
                 </div>
                 
@@ -121,8 +119,8 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">Visit Us</h4>
-                    <p className="text-gray-400">123 Tech Plaza, Silicon Valley</p>
-                    <p className="text-gray-400">CA 94043, United States</p>
+                    <p className="text-gray-400">123 High Street, London, Greater London </p>
+                    <p className="text-gray-400">W1A 1AA, United Kingdom</p>
                   </div>
                 </div>
               </div>

@@ -17,13 +17,10 @@ export const Footer = () => {
               Transforming ideas into exceptional digital experiences with cutting-edge technology solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-devcode-purple transition-colors">
+              <a href="https://github.com/AhmadAli0071" className="text-gray-400 hover:text-devcode-purple transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-devcode-blue transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-devcode-pink transition-colors">
+              <a href="https://www.linkedin.com/company/devncode-cloud/" className="text-gray-400 hover:text-devcode-pink transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
