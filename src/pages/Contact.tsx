@@ -131,9 +131,9 @@ const Contact = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold text-white">Our Office</h3>
                       <p className="text-gray-300 mt-1">
-                        123 Innovation Street<br />
-                        Tech District, CA 94107<br />
-                        United States
+                      123 High Street,<br />
+                      London, Greater London<br />
+                      United Kingdom
                       </p>
                     </div>
                   </div>
@@ -149,7 +149,7 @@ const Contact = () => {
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold text-white">Contact Us</h3>
                       <p className="text-gray-300 mt-1">
-                        Phone: +1 (555) 123-4567<br />
+                        Phone: +44 7716 413210<br />
                         Email: info@devandcode.com
                       </p>
                     </div>
