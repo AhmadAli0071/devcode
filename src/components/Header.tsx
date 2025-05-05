@@ -89,9 +89,7 @@ export const Header = () => {
               {item.name}
             </Link>
           ))}
-          <Button className="mt-4 bg-gradient-to-r from-devcode-purple to-devcode-blue hover:opacity-90 transition-opacity">
-            Get Started
-          </Button>
+          
         </div>
       </div>
     </header>

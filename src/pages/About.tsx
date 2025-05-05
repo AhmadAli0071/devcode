@@ -308,7 +308,7 @@ const About = () => {
               </p>
               
               <a 
-                href="/careers"
+                href="https://www.linkedin.com/company/devncode-cloud/"
                 className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-devcode-purple to-devcode-blue hover:opacity-90 font-medium transition-all"
               >
                 View Open Positions <ArrowRight className="ml-2 w-4 h-4" />
