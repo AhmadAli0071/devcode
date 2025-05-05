@@ -125,7 +125,7 @@ export const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <h4 className="text-lg font-medium mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
                   <a href="#" className="bg-white/10 hover:bg-white/20 transition-colors p-2.5 rounded-full">
@@ -149,7 +149,7 @@ export const ContactSection = () => {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
 
